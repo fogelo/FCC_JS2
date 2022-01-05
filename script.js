@@ -179,7 +179,7 @@ console.log(result)*/
 
 /*?10. Profile Lookup*/
 
-const contacts = [
+/*const contacts = [
     {
         firstName: "Akira",
         lastName: "Laine",
@@ -222,5 +222,16 @@ function lookUpProfile(name, prop) {
     }
         return arr[0]
 // Only change code above this line
-}
+}*/
 
+
+/*?10. Generate Random Fractions with JavaScript*/
+
+function randomFraction() {
+
+    // Only change code below this line
+
+    return Math.random();
+
+    // Only change code above this line
+}
