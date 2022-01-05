@@ -227,11 +227,26 @@ function lookUpProfile(name, prop) {
 
 /*?10. Generate Random Fractions with JavaScript*/
 
-function randomFraction() {
+/*function randomFraction() {
 
     // Only change code below this line
 
     return Math.random();
 
     // Only change code above this line
+}*/
+
+
+
+/*?10. Generate Random Whole Numbers with JavaScript*/
+
+function randomWholeNum() {
+
+    // Only change code below this line
+
+    return Math.floor(Math.random()*10);
 }
+
+
+// const result = randomWholeNum()
+// console.log(result)
