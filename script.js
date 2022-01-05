@@ -237,7 +237,6 @@ function lookUpProfile(name, prop) {
 }*/
 
 
-
 /*?10. Generate Random Whole Numbers with JavaScript*/
 
 /*function randomWholeNum() {
@@ -255,10 +254,16 @@ function randomRange(myMin, myMax) {
 
 /*?11. Use the parseInt Function*/
 
-function convertToInteger(str) {
+/*function convertToInteger(str) {
     return parseInt(str)
+}*/
+
+/*?12. Use the parseInt Function with a Radix*/
+
+function convertToInteger(str) {
+    return parseInt(str, 2)
 }
 
 
-const result = convertToInteger("56");
+const result = convertToInteger("10011");
 console.log(result)
