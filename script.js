@@ -260,10 +260,17 @@ function randomRange(myMin, myMax) {
 
 /*?12. Use the parseInt Function with a Radix*/
 
-function convertToInteger(str) {
+/*function convertToInteger(str) {
     return parseInt(str, 2)
+}*/
+
+/*?13. Use the Conditional (Ternary) Operator*/
+
+function checkEqual(a, b) {
+    return a === b ? "Equal" : "Not Equal";
 }
 
+checkEqual(1, 2);
 
 const result = convertToInteger("10011");
 console.log(result)
