@@ -279,5 +279,19 @@ function checkSign(num) {
 }
 
 
-// const result = convertToInteger("10011");
-// console.log(result)
+/*?15. Use Recursion to Create a Countdown*/
+
+// Only change code below this line
+function countdown(n){
+    if (n < 1) {
+        return [];
+    } else {
+        const countArray = countdown(n - 1);
+        countArray.unshift(n);
+        return countArray;
+    }
+}
+// Only change code above this line
+
+const result = countdown(10)
+console.log(result)
