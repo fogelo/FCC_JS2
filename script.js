@@ -266,11 +266,18 @@ function randomRange(myMin, myMax) {
 
 /*?13. Use the Conditional (Ternary) Operator*/
 
-function checkEqual(a, b) {
+/*function checkEqual(a, b) {
     return a === b ? "Equal" : "Not Equal";
+}*/
+
+/*?14. Use Multiple Conditional (Ternary) Operators*/
+
+function checkSign(num) {
+    return num > 0 ? 'positive'
+        : num < 0 ? 'negative'
+            : 'zero'
 }
 
-checkEqual(1, 2);
 
-const result = convertToInteger("10011");
-console.log(result)
+// const result = convertToInteger("10011");
+// console.log(result)
