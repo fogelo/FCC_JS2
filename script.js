@@ -317,10 +317,6 @@ function rangeOfNumbers(startNum, endNum) {
     return i;
 }*/
 
-// const result = rangeOfNumbers(1, 5)
-// console.log(result)
-
-
 /*?18. Mutate an Array Declared with const*/
 
 /*const s = [5, 7, 2];
@@ -373,5 +369,16 @@ console.log(myConcat([1, 2], [3, 4, 5]));*/
 
 /*?22. Set Default Parameters for Your Functions*/
 
+/*
 const increment = (number = 5, value = 1) => number + value;
+*/
 
+/*§23. Use the Rest Parameter with Function Parameters*/
+
+const sum = (...args) => {
+    console.log(args)
+    return args.reduce((a, b) => a + b, 0);
+}
+
+const result = sum(1, 5,2)
+console.log(result)
