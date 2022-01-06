@@ -1,6 +1,6 @@
 //§ FCC_JS
 
-/*!1. Counting Cards*/
+/*?1. Counting Cards*/
 
 /*
 let count = 0;
@@ -53,7 +53,7 @@ cc(10); cc("J"); cc("K"); cc('Q'); cc('A');
 console.log(count)
 */
 
-/*!2. Record Collection*/
+/*?2. Record Collection*/
 
 /*
 const recordCollection = {
@@ -98,7 +98,7 @@ function updateRecords(records, id, prop, value) {
 }
 */
 
-/*!3.Iterate Odd Numbers With a For Loop*/
+/*?3.Iterate Odd Numbers With a For Loop*/
 
 /*const myArray = [];
 
@@ -108,7 +108,7 @@ for(let i = 1; i<=5;i++) {
     myArray.push(i)
 }*/
 
-/*!4.Iterate Odd Numbers With a For Loop2*/
+/*?4.Iterate Odd Numbers With a For Loop2*/
 
 /*const myArray = [];
 
@@ -120,7 +120,7 @@ for (let i = 1;i<=9;i+=2) {
 
 console.log(myArray)*/
 
-/*!5. Count Backwards With a For Loop*/
+/*?5. Count Backwards With a For Loop*/
 
 /*
 const myArray = [];
@@ -131,7 +131,7 @@ for(let i = 9;i >= 1;i -= 2){
     myArray.push(i)
 }*/
 
-/*!6.Iterate Through an Array with a For Loop*/
+/*?6.Iterate Through an Array with a For Loop*/
 
 /*
 const myArr = [2, 3, 4, 5, 6];
@@ -237,7 +237,7 @@ function lookUpProfile(name, prop) {
 }*/
 
 
-/*?10. Generate Random Whole Numbers with JavaScript*/
+/*§10. Generate Random Whole Numbers with JavaScript*/
 
 /*function randomWholeNum() {
 
@@ -252,13 +252,13 @@ function randomRange(myMin, myMax) {
     // Only change code above this line
 }*/
 
-/*?11. Use the parseInt Function*/
+/*§11. Use the parseInt Function*/
 
 /*function convertToInteger(str) {
     return parseInt(str)
 }*/
 
-/*?12. Use the parseInt Function with a Radix*/
+/*§12. Use the parseInt Function with a Radix*/
 
 /*function convertToInteger(str) {
     return parseInt(str, 2)
@@ -279,9 +279,9 @@ function checkSign(num) {
 }
 
 
-/*?15. Use Recursion to Create a Countdown*/
+/*?§15. Use Recursion to Create a Countdown*/
 
-// Only change code below this line
+/*// Only change code below this line
 function countdown(n){
     if (n < 1) {
         return [];
@@ -290,8 +290,34 @@ function countdown(n){
         countArray.unshift(n);
         return countArray;
     }
-}
-// Only change code above this line
+}*/
 
-const result = countdown(10)
-console.log(result)
+/*§16. Use Recursion to Create a Range of Numbers*/
+
+function rangeOfNumbers(startNum, endNum) {
+    if (startNum > endNum) {
+        return [];
+    } else {
+        const countArray = rangeOfNumbers(startNum + 1, endNum);
+        countArray.unshift(startNum);
+        return countArray;
+    }
+}
+
+
+
+
+/*?17. Compare Scopes of the var and let Keywords*/
+
+function checkScope() {
+    let i = 'function scope';
+    if (true) {
+        let i = 'block scope';
+        console.log('Block scope i is: ', i);
+    }
+    console.log('Function scope i is: ', i);
+    return i;
+}
+
+// const result = rangeOfNumbers(1, 5)
+// console.log(result)
