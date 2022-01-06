@@ -378,6 +378,7 @@ const increment = (number = 5, value = 1) => number + value;
 const sum = (...args) => {
     console.log(args)
     return args.reduce((a, b) => a + b, 0);
+
 }
 
 const result = sum(1, 5,2)
