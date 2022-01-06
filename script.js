@@ -305,11 +305,9 @@ function rangeOfNumbers(startNum, endNum) {
 }
 
 
-
-
 /*?17. Compare Scopes of the var and let Keywords*/
 
-function checkScope() {
+/*function checkScope() {
     let i = 'function scope';
     if (true) {
         let i = 'block scope';
@@ -317,7 +315,22 @@ function checkScope() {
     }
     console.log('Function scope i is: ', i);
     return i;
-}
+}*/
 
 // const result = rangeOfNumbers(1, 5)
 // console.log(result)
+
+
+/*?18. Mutate an Array Declared with const*/
+
+const s = [5, 7, 2];
+
+function editInPlace() {
+    // Only change code below this line
+    s[0] = 2
+    s[1] = 5
+    s[2] = 7
+    // Only change code above this line
+}
+
+editInPlace();
