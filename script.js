@@ -365,8 +365,13 @@ const magic = ()=> {
 
 /*?21. Write Arrow Functions with Parameters*/
 
-const myConcat = (arr1, arr2) => {
+/*const myConcat = (arr1, arr2) => {
     return arr1.concat(arr2);
 };
 
-console.log(myConcat([1, 2], [3, 4, 5]));
+console.log(myConcat([1, 2], [3, 4, 5]));*/
+
+/*?22. Set Default Parameters for Your Functions*/
+
+const increment = (number = 5, value = 1) => number + value;
+
