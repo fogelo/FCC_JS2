@@ -375,6 +375,7 @@ const increment = (number = 5, value = 1) => number + value;
 
 /*§23. Use the Rest Parameter with Function Parameters*/
 
+/*
 const sum = (...args) => {
     console.log(args)
     return args.reduce((a, b) => a + b, 0);
@@ -382,4 +383,13 @@ const sum = (...args) => {
 }
 
 const result = sum(1, 5,2)
-console.log(result)
+console.log(result)*/
+
+/*?24. Use the Spread Operator to Evaluate Arrays In-Place*/
+
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
+
+arr2 = [...arr1];  // Change this line
+
+console.log(arr2);
