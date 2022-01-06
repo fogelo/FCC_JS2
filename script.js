@@ -338,6 +338,7 @@ editInPlace();*/
 
 /*?19. Prevent Object Mutation*/
 
+/*
 function freezeObj() {
     const MATH_CONSTANTS = {
         PI: 3.14
@@ -353,4 +354,10 @@ function freezeObj() {
     return MATH_CONSTANTS.PI;
 }
 
-const PI = freezeObj();
+const PI = freezeObj();*/
+
+/*?20. Use Arrow Functions to Write Concise Anonymous Functions*/
+
+const magic = ()=> {
+    return new Date();
+};
