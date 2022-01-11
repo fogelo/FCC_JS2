@@ -21,7 +21,14 @@ let result = fccRegex.test(myString);*/
 
 /*?4. Extract Matches*/
 
-let extractStr = "Extract the word 'coding' from this string.";
+/*let extractStr = "Extract the word 'coding' from this string.";
 let codingRegex = /coding/; // Change this line
 let result = extractStr.match(codingRegex); // Change this line
+console.log(result)*/
+
+/*?5. Find More Than the First Match*/
+
+let twinkleStar = "Twinkle, twinkle, little star";
+let starRegex = /Twinkle/gi; // Change this line
+let result = twinkleStar.match(starRegex); // Change this line
 console.log(result)
