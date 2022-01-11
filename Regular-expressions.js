@@ -107,6 +107,11 @@ let result = userCheck.test(username);
 console.log(result)*/
 
 /*§15. Positive and Negative Lookahead*/
-let sampleWord = "astronaut";
+/*let sampleWord = "astronaut";
 let pwRegex = /(?=\w{6})(?=\w*\d{2})/; // Change this line
-let result = pwRegex.test(sampleWord);
+let result = pwRegex.test(sampleWord);*/
+
+/*§16. Check For Mixed Grouping of Characters*/
+let testStr = "Pumpkin";
+let testRegex = /P(engu|umpk)in/;
+testRegex.test(testStr);
