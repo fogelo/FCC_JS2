@@ -537,7 +537,7 @@ console.log(carrot.name); // Should display 'carrot'*/
 
 /*?35. Use getters and setters to Control Access to an Object*/
 
-// Only change code below this line
+/*// Only change code below this line
 class Thermostat{
     constructor(fahrenheit) {
         this.fahrenheit = fahrenheit
@@ -554,4 +554,7 @@ class Thermostat{
 const thermos = new Thermostat(76); // Setting in Fahrenheit scale
 let temp = thermos.temperature; // 24.44 in Celsius
 thermos.temperature = 26;
-temp = thermos.temperature; // 26 in Celsius
+temp = thermos.temperature; // 26 in Celsius*/
+
+/*?37. Create a JavaScript Promise*/
+
