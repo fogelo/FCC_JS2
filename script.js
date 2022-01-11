@@ -442,8 +442,7 @@ console.log(lowToday)*/
 
 /*?29. Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements*/
 
-
-const source = [1,2,3,4,5,6,7,8,9,10];
+/*const source = [1,2,3,4,5,6,7,8,9,10];
 function removeFirstTwo(list) {
     // Only change code below this line
     const [,,...arr] = list; // Change this line
@@ -451,4 +450,25 @@ function removeFirstTwo(list) {
     return arr;
 }
 const arr = removeFirstTwo(source);
-console.log(arr)
+console.log(arr)*/
+
+/*§30. Use Destructuring Assignment to Pass an Object as a Function's Parameters*/
+
+const stats = {
+    max: 56.78,
+    standard_deviation: 4.34,
+    median: 34.54,
+    mode: 23.87,
+    min: -0.75,
+    average: 35.85
+};
+
+// Only change code below this line
+const half = ({max, min}) => {
+   // const {max, min} = stats
+    return (max + min) / 2.0;
+}
+
+const result = half(stats)
+console.log(result)
+// Only change code above this line
