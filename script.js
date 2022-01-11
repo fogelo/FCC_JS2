@@ -272,11 +272,11 @@ function randomRange(myMin, myMax) {
 
 /*?14. Use Multiple Conditional (Ternary) Operators*/
 
-function checkSign(num) {
+/*function checkSign(num) {
     return num > 0 ? 'positive'
         : num < 0 ? 'negative'
             : 'zero'
-}
+}*/
 
 
 /*?§15. Use Recursion to Create a Countdown*/
@@ -294,7 +294,7 @@ function countdown(n){
 
 /*§16. Use Recursion to Create a Range of Numbers*/
 
-function rangeOfNumbers(startNum, endNum) {
+/*function rangeOfNumbers(startNum, endNum) {
     if (startNum > endNum) {
         return [];
     } else {
@@ -302,7 +302,7 @@ function rangeOfNumbers(startNum, endNum) {
         countArray.unshift(startNum);
         return countArray;
     }
-}
+}*/
 
 
 /*?17. Compare Scopes of the var and let Keywords*/
@@ -405,9 +405,9 @@ console.log(arr2);*/
 
 const {today, tomorrow} = HIGH_TEMPERATURES*/
 
-/*?26. Use Destructuring Assignment to Assign Variables from Objects*/
+/*§26. Use Destructuring Assignment to Assign Variables from Objects*/
 
-const HIGH_TEMPERATURES = {
+/*const HIGH_TEMPERATURES = {
     yesterday: 75,
     today: 77,
     tomorrow: 80
@@ -415,6 +415,24 @@ const HIGH_TEMPERATURES = {
 
 
 const {today: highToday, tomorrow: highTomorrow  } = HIGH_TEMPERATURES
+
+const {today: today, tomorrow} = HIGH_TEMPERATURES
+console.log(today)*/
+
+/*§27. Use Destructuring Assignment to Assign Variables from Nested Objects*/
+// nested - вложенный
+
+const LOCAL_FORECAST = {
+    yesterday: { low: 61, high: 75 },
+    today: { low: 64, high: 77 },
+    tomorrow: { low: 68, high: 80 }
+};
+
+
+const {today: {low: lowToday,high: highToday}} = LOCAL_FORECAST
+console.log(lowToday)
+
+
 
 
 
