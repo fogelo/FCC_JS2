@@ -126,8 +126,17 @@ let result = reRegex.test(repeatNum);*/
 
 /*§18. Use Capture Groups to Search and Replace*/
 
+/*
 let str = "one two three";
 let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
 let replaceText = "$3 $2 $1"; // каждая группа пронумеровалась когда нашлась методом replace, и чтобы поменять их местами
 // можно просто использовать знак $ и номер группы
-let result = str.replace(fixRegex, replaceText);
+let result = str.replace(fixRegex, replaceText);*/
+
+/*§19. Remove Whitespace from Start and End */
+
+let hello = "   Hello, World!  ";
+let wsRegex = /(\s*$)|(^\s*)/g; // Change this line
+let result = hello.replace(wsRegex, ''); // Change this line
+console.log(hello)
+console.log(result)
