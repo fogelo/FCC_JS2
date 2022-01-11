@@ -76,10 +76,36 @@ let result = difficultSpelling.match(myRegex);*/
 
 /*?12. Match Characters that Occur Zero or More Times*/
 
-// Only change code below this line
+/*// Only change code below this line
 let chewieQuote = "Aaaaaaaaaaaaaaaarrrgh!"
-let chewieRegex = /Aa*/; // Change this line
+let chewieRegex = /Aa*!/; // Change this line
 // Only change code above this line
 
 let result = chewieQuote.match(chewieRegex);
+console.log(result)*/
+
+/*?13. Find Characters with Lazy Matching*/
+
+/*let text = "<h1>Winter is coming</h1>";
+let myRegex = /<h.*?>/; // Change this line
+let result = text.match(myRegex);
+console.log(result)*/
+
+/*§14. Restrict Possible Usernames*/
+/*
+1) Usernames can only use alpha-numeric characters.
+2) The only numbers in the username have to be at the end.
+There can be zero or more of them at the end. Username cannot start with the number.
+3) Username letters can be lowercase and uppercase.
+4) Usernames have to be at least two characters long.
+A two-character username can only use alphabet letters as characters.
+*/
+
+
+let username = "BadUs3rnam3";
+let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d$/i; // Change this line
+let result = userCheck.test(username);
 console.log(result)
+
+/*?14. Find One or More Criminals in a Hunt*/
+
