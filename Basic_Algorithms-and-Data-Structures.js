@@ -476,6 +476,7 @@ console.log(result)
 /*?31. Create Strings using Template Literals*/
 
 
+/*
 const result = {
     success: ["max-length", "no-amd", "prefer-arrow-functions"],
     failure: ["no-var", "var-on-top", "linebreak"],
@@ -494,3 +495,17 @@ function makeList(arr) {
 
 const failuresList = makeList(result.failure);
 console.log(failuresList)
+*/
+
+/*?32. Write Concise Object Literal Declarations Using Object Property Shorthand*/
+
+const createPerson = (name, age, gender) => {
+    // Only change code below this line
+    //если не присваивать значение явно автоматически будет присвоено значение, которое совпадает с ключом
+    return {
+        name,
+        age,
+        gender
+    };
+    // Only change code above this line
+};
