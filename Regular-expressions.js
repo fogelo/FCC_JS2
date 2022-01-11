@@ -101,11 +101,12 @@ There can be zero or more of them at the end. Username cannot start with the num
 A two-character username can only use alphabet letters as characters.
 */
 
-
-let username = "BadUs3rnam3";
+/*let username = "BadUs3rnam3";
 let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d$/i; // Change this line
 let result = userCheck.test(username);
-console.log(result)
+console.log(result)*/
 
-/*?14. Find One or More Criminals in a Hunt*/
-
+/*§15. Positive and Negative Lookahead*/
+let sampleWord = "astronaut";
+let pwRegex = /(?=\w{6})(?=\w*\d{2})/; // Change this line
+let result = pwRegex.test(sampleWord);
