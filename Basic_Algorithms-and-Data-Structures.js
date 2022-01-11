@@ -512,7 +512,7 @@ console.log(failuresList)
 
 /*?33. Write Concise Declarative Functions with ES6*/
 
-// Only change code below this line
+/*// Only change code below this line
 const bicycle = {
     gear: 2,
     setGear(newGear) {
@@ -521,4 +521,15 @@ const bicycle = {
 };
 // Only change code above this line
 bicycle.setGear(3);
-console.log(bicycle.gear);
+console.log(bicycle.gear);*/
+
+/*?34. Use class Syntax to Define a Constructor Function*/
+
+class Vegetable{
+    constructor(name) {
+        this.name = name
+    }
+}
+
+const carrot = new Vegetable('carrot');
+console.log(carrot.name); // Should display 'carrot'
