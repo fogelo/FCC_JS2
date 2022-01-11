@@ -120,7 +120,14 @@ testRegex.test(testStr);
 
 /*§17. Reuse Patterns Using Capture Groups (группировка с обратной связью)*/
 
-let repeatNum = "42 42 42";
+/*let repeatNum = "42 42 42";
 let reRegex = /^(\d+)\s\1\s\1$/;
-let result = reRegex.test(repeatNum);
+let result = reRegex.test(repeatNum);*/
 
+/*§18. Use Capture Groups to Search and Replace*/
+
+let str = "one two three";
+let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
+let replaceText = "$3 $2 $1"; // каждая группа пронумеровалась когда нашлась методом replace, и чтобы поменять их местами
+// можно просто использовать знак $ и номер группы
+let result = str.replace(fixRegex, replaceText);
