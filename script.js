@@ -454,7 +454,7 @@ console.log(arr)*/
 
 /*§30. Use Destructuring Assignment to Pass an Object as a Function's Parameters*/
 
-const stats = {
+/*const stats = {
     max: 56.78,
     standard_deviation: 4.34,
     median: 34.54,
@@ -471,4 +471,26 @@ const half = ({max, min}) => {
 
 const result = half(stats)
 console.log(result)
-// Only change code above this line
+// Only change code above this line*/
+
+/*?31. Create Strings using Template Literals*/
+
+
+const result = {
+    success: ["max-length", "no-amd", "prefer-arrow-functions"],
+    failure: ["no-var", "var-on-top", "linebreak"],
+    skipped: ["no-extra-semi", "no-dup-keys"]
+};
+function makeList(arr) {
+    // Only change code below this line
+    const failureItems = [];
+    for (let i = 0; i < arr.length; i++) {
+        failureItems.push(`<li class="text-warning">${arr[i]}</li>`)
+    }
+    // Only change code above this line
+
+    return failureItems;
+}
+
+const failuresList = makeList(result.failure);
+console.log(failuresList)
