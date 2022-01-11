@@ -32,3 +32,8 @@ let twinkleStar = "Twinkle, twinkle, little star";
 let starRegex = /Twinkle/gi; // Change this line
 let result = twinkleStar.match(starRegex); // Change this line
 console.log(result)
+
+/*?6. Match Anything with Wildcard Period*/
+let exampleStr = "Let's have fun with regular expressions!";
+let unRegex = /.un/; // Change this line
+let result = unRegex.test(exampleStr);
