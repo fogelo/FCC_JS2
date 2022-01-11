@@ -112,6 +112,15 @@ let pwRegex = /(?=\w{6})(?=\w*\d{2})/; // Change this line
 let result = pwRegex.test(sampleWord);*/
 
 /*§16. Check For Mixed Grouping of Characters*/
+/*
 let testStr = "Pumpkin";
 let testRegex = /P(engu|umpk)in/;
 testRegex.test(testStr);
+*/
+
+/*§17. Reuse Patterns Using Capture Groups (группировка с обратной связью)*/
+
+let repeatNum = "42 42 42";
+let reRegex = /^(\d+)\s\1\s\1$/;
+let result = reRegex.test(repeatNum);
+
