@@ -84,11 +84,13 @@ console.log(r)*/
     }, 0)
 }*/
 
-//@ решение №3 c помощью
+//@ решение №3
 
+/*
 function findLongestWordLength(str) {
     return Math.max(...str.split(' ').map(item => item.length))
 }
 
 const result = findLongestWordLength("The quick brown fox jumped over the lazy dog");
 console.log(result)
+*/
