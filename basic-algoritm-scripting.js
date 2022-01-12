@@ -80,6 +80,7 @@ function repeatStringNumTimes(str, num) {
 */
 
 //@ решение №2
+/*
 function repeatStringNumTimes(str, num) {
     let result = ''
     for (let i = 0; i < num; i++) {
@@ -89,4 +90,27 @@ function repeatStringNumTimes(str, num) {
 }
 
 const result = repeatStringNumTimes("abc", 3);
+console.log(result)*/
+
+/*§5 Truncate a String*/
+
+//@ мое решение с регулярками
+/*function truncateString(str, num) {
+    let regexp = new RegExp(`^.{${num}}`, 'i')
+    if (str.length <= num) {
+        return str + '.'
+    }
+    return str.match(regexp, '')[0] + '...'
+}*/
+
+//@ решение с помощью slice из ответов
+
+function truncateString(str, num) {
+    return num >= str.length ? str : str.slice(0, num) + '...'
+}
+
+const result = truncateString("A-tisket a-tasket A green and yellow basket", 1000);
 console.log(result)
+
+
+
