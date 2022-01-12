@@ -48,7 +48,7 @@ function countOnline(usersObj) {
 console.log(countOnline(users));*/
 
 /*?3. Factorialize a Number*/
-function factorialize(num) {
+/*function factorialize(num) {
     let result = 1;
     while(num){
         result = result * num
@@ -60,4 +60,35 @@ function factorialize(num) {
 }
 
 const r = factorialize(5);
-console.log(r)
+console.log(r)*/
+
+
+/*?4.Find the Longest Word in a String*/
+//@ решение №1 с помощью цикла for
+/*function findLongestWordLength(str) {
+    let arr = str.split(' ')
+    let maxLength = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].length > maxLength) {
+            maxLength = arr[i].length
+        }
+            }
+    return maxLength;
+}*/
+
+//@ решение №2 c помощью reduce
+
+/*function findLongestWordLength(str) {
+    return str.split(' ').reduce((prev, item)=>{
+        return Math.max(prev, item.length)
+    }, 0)
+}*/
+
+//@ решение №3 c помощью
+
+function findLongestWordLength(str) {
+    return Math.max(...str.split(' ').map(item => item.length))
+}
+
+const result = findLongestWordLength("The quick brown fox jumped over the lazy dog");
+console.log(result)
