@@ -48,7 +48,7 @@ console.log(result)
 
 /*?3. Return Largest Numbers in Arrays*/
 
-function largestOfFour(arr) {
+/*function largestOfFour(arr) {
     let maxItems = []
     for (let i = 0; i < arr.length; i++) {
         maxItems.push(Math.max(...arr[i]))
@@ -57,5 +57,36 @@ function largestOfFour(arr) {
 }
 
 const result = largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
-console.log(result)
+console.log(result)*/
 
+/*§4. Confirm the Ending*/
+
+/*
+function confirmEnding(str, target) {
+    let regexp = new RegExp(`${target}$`)
+    console.log(regexp)
+    return regexp.test(str);
+}
+
+const result = confirmEnding("Bastian", "a");
+console.log(result)*/
+
+/*?4. Repeat a String Repeat a String*/
+//@ решение №1
+/*
+function repeatStringNumTimes(str, num) {
+    return num >= 0 ? str.repeat(num) : ''
+}
+*/
+
+//@ решение №2
+function repeatStringNumTimes(str, num) {
+    let result = ''
+    for (let i = 0; i < num; i++) {
+        result += str
+    }
+    return result
+}
+
+const result = repeatStringNumTimes("abc", 3);
+console.log(result)
