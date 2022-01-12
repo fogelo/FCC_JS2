@@ -135,8 +135,8 @@ let result = str.replace(fixRegex, replaceText);*/
 
 /*§19. Remove Whitespace from Start and End */
 
-let hello = "   Hello, World!  ";
+/*let hello = "   Hello, World!  ";
 let wsRegex = /(\s*$)|(^\s*)/g; // Change this line
 let result = hello.replace(wsRegex, ''); // Change this line
 console.log(hello)
-console.log(result)
+console.log(result)*/
