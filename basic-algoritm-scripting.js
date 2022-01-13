@@ -132,10 +132,26 @@ console.log(result)*/
 
 /*?6 Boo who*/
 
-function booWho(bool) {
+/*function booWho(bool) {
     return typeof bool === 'boolean'
 }
 
-
 const result = booWho(false);
+console.log(result)*/
+
+/*?7 Title Case a Sentence*/
+
+//@ мое решение (хз почему не прошло валидацию)
+function titleCase(str) {
+    arr = str.split(' ')
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].replace(/^\w/g, arr[i][0].toUpperCase())
+    }
+    str = arr.join(' ')
+    return str ;
+}
+
+const result = titleCase("I'm a little tea pot");
 console.log(result)
+
+
