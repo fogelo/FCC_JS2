@@ -122,11 +122,20 @@ console.log(result)
 
 
 //@ решение из ответов
-function findElement(arr, func) {
+/*function findElement(arr, func) {
     return arr.find(func)
 }
 
 const result = findElement([1, 2, 3, 4], num => num % 2 === 0);
+console.log(result)*/
+
+
+/*?6 Boo who*/
+
+function booWho(bool) {
+    return typeof bool === 'boolean'
+}
+
+
+const result = booWho(false);
 console.log(result)
-
-
