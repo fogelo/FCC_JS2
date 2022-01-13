@@ -142,16 +142,35 @@ console.log(result)*/
 /*?7 Title Case a Sentence*/
 
 //@ мое решение (хз почему не прошло валидацию)
-function titleCase(str) {
+/*function titleCase(str) {
     arr = str.split(' ')
     for (let i = 0; i < arr.length; i++) {
         arr[i] = arr[i].replace(/^\w/g, arr[i][0].toUpperCase())
     }
     str = arr.join(' ')
     return str ;
+}*/
+
+//@ решение из ответов
+
+/*function titleCase(str) {
+    return str
+        .toLowerCase()
+        .replace(/(^|\s)\S/g, found_item => found_item.toUpperCase());
 }
 
 const result = titleCase("I'm a little tea pot");
+console.log(result)*/
+
+/*?8 Slice and Splice*/
+
+function frankenSplice(arr1, arr2, n) {
+    let arr3 = arr2.slice()
+    arr3.splice(n, 0, ...arr1)
+    return arr3
+}
+
+const result = frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2);
 console.log(result)
 
 
