@@ -105,12 +105,28 @@ console.log(result)*/
 
 //@ решение с помощью slice из ответов
 
+/*
 function truncateString(str, num) {
     return num >= str.length ? str : str.slice(0, num) + '...'
 }
 
 const result = truncateString("A-tisket a-tasket A green and yellow basket", 1000);
 console.log(result)
+*/
 
+/*?6 Finders Keepers*/
+//@ мое решение (не воспользовался передаваемой функцией)
+/*function findElement(arr, func) {
+   return arr.find((item) => item % 2 === 0)
+}*/
+
+
+//@ решение из ответов
+function findElement(arr, func) {
+    return arr.find(func)
+}
+
+const result = findElement([1, 2, 3, 4], num => num % 2 === 0);
+console.log(result)
 
 
