@@ -180,11 +180,26 @@ console.log(result)*/
     return arr.filter((item) => !!item);
 }*/
 
-//решение из ответов (фильтр ждет функцию и вернет элемент если функция переданная в него вернет true,
-//соответственно Boolean и есть такая функция, она принимает параметр делает из него boolean и возвращает его)
+//@решение из ответов (фильтр ждет функцию и вернет элемент если функция переданная в него вернет true,
+//@соответственно Boolean и есть такая функция, она принимает параметр, делает из него boolean и возвращает его)
+/*
 function bouncer(arr) {
     return arr.filter(Boolean);
 }
 
 const result = bouncer([false, null, 0, NaN, undefined, ""]);
+console.log(result)*/
+
+/*?10 Where do I Belong*/
+//@ мое решение
+/*function getIndexToIns(arr, num) {
+    let ind = arr.sort((a, b) => a - b).indexOf(arr.find(item => item >= num), 0)
+    return ind === -1 ? arr.length : ind
+}*/
+
+//@ решение из ответов
+function getIndexToIns(arr, num) {
+    return arr.filter(val => num > val).length;
+}
+const result = getIndexToIns([40, 60], 50);
 console.log(result)
