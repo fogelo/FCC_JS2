@@ -198,8 +198,26 @@ console.log(result)*/
 }*/
 
 //@ решение из ответов
+/*
 function getIndexToIns(arr, num) {
     return arr.filter(val => num > val).length;
 }
 const result = getIndexToIns([40, 60], 50);
+console.log(result)*/
+
+/*?11 Mutations*/
+
+function mutation(arr) {
+    arr[0] = arr[0].toLowerCase()
+    arr[1] = arr[1].toLowerCase()
+    let arr2 = arr[0].split('');
+    for (let i = 0; i < arr[1].length; i++) {
+        if (!arr2.includes(arr[1][i], 0)) {
+            return false
+        }
+    }
+    return true
+}
+
+const result = mutation(["zyxwvutsrponmlkjihgfedcba", "qrstu"]);
 console.log(result)
