@@ -225,6 +225,7 @@ console.log(result)*/
 
 /*?12 Chunky Monkey*/
 
+/*
 function chunkArrayInGroups(arr, size) {
     let result = []
     for (let i = 0; i <= arr.length; i++) {
@@ -235,3 +236,4 @@ function chunkArrayInGroups(arr, size) {
 
 const result = chunkArrayInGroups(["a", "b", "c", "d"], 2);
 console.log(result)
+*/
