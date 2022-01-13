@@ -162,15 +162,29 @@ console.log(result)*/
 const result = titleCase("I'm a little tea pot");
 console.log(result)*/
 
-/*?8 Slice and Splice*/
+/*§8 Slice and Splice*/
 
-function frankenSplice(arr1, arr2, n) {
+/*function frankenSplice(arr1, arr2, n) {
     let arr3 = arr2.slice()
     arr3.splice(n, 0, ...arr1)
     return arr3
 }
 
 const result = frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2);
+console.log(result)*/
+
+/*?9 Falsy Bouncer*/
+
+//@ мое решение
+/*function bouncer(arr) {
+    return arr.filter((item) => !!item);
+}*/
+
+//решение из ответов (фильтр ждет функцию и вернет элемент если функция переданная в него вернет true,
+//соответственно Boolean и есть такая функция, она принимает параметр делает из него boolean и возвращает его)
+function bouncer(arr) {
+    return arr.filter(Boolean);
+}
+
+const result = bouncer([false, null, 0, NaN, undefined, ""]);
 console.log(result)
-
-
