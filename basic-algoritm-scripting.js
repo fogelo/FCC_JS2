@@ -207,6 +207,7 @@ console.log(result)*/
 
 /*?11 Mutations*/
 
+/*
 function mutation(arr) {
     arr[0] = arr[0].toLowerCase()
     arr[1] = arr[1].toLowerCase()
@@ -220,4 +221,17 @@ function mutation(arr) {
 }
 
 const result = mutation(["zyxwvutsrponmlkjihgfedcba", "qrstu"]);
+console.log(result)*/
+
+/*?12 Chunky Monkey*/
+
+function chunkArrayInGroups(arr, size) {
+    let result = []
+    for (let i = 0; i <= arr.length; i++) {
+        result.push(arr.splice(0, size))
+    }
+    return arr.length > 0 ? [...result, [...arr]] : result
+}
+
+const result = chunkArrayInGroups(["a", "b", "c", "d"], 2);
 console.log(result)
