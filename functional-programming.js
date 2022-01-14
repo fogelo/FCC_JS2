@@ -422,7 +422,7 @@ console.log(squaredIntegers);*/
 
 /*?5 Split a String into an Array Using the split Method*/
 
-function splitify(str) {
+/*function splitify(str) {
     // Only change code below this line
 
     return str.split(/\s|,|-|\./)
@@ -430,4 +430,16 @@ function splitify(str) {
 }
 
 const result = splitify("Hello World,I-am code");
+console.log(result)*/
+
+/*?6 Combine an Array into a String Using the join Method*/
+
+function sentensify(str) {
+    // Only change code below this line
+
+    return str.split(/-/).join(' ')
+    // Only change code above this line
+}
+
+const result = sentensify("May-the-force-be-with-you");
 console.log(result)
