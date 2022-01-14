@@ -434,7 +434,7 @@ console.log(result)*/
 
 /*?6 Combine an Array into a String Using the join Method*/
 
-function sentensify(str) {
+/*function sentensify(str) {
     // Only change code below this line
 
     return str.split(/-/).join(' ')
@@ -442,4 +442,27 @@ function sentensify(str) {
 }
 
 const result = sentensify("May-the-force-be-with-you");
-console.log(result)
+console.log(result)*/
+
+/*?7 Introduction to Currying and Partial Application*//*
+Каррирование или карринг (currying) в функциональном программирование — это преобразование функции с множеством аргументов
+в набор вложенных функций с одним аргументом. При вызове каррированной функции с передачей ей одного аргумента, она возвращает
+новую функцию, которая ожидает поступления следующего аргумента.*/
+
+//то есть из этого
+/*function add(x, y, z) {
+    return x+y+z
+}*/
+
+//в это
+/*function add(x) {
+    // Only change code below this line
+    return function(y) {
+        return function(z) {
+            return x+y+z
+        }
+    }
+    // Only change code above this line
+}
+
+add(10)(20)(30)*/
