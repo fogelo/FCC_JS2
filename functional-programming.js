@@ -399,3 +399,35 @@ function getRating(watchList) {
 }
 
 console.log(getRating(watchList));*/
+
+/*?4 Use the reduce Method to Analyze Data*/
+//@ мое решение
+/*const squareList = arr => {
+    // Only change code below this line
+    return arr.filter((item) => item > 0 && item - Math.floor(item) === 0)
+        .map((item) => item ** 2)
+    // Only change code above this line
+};*/
+
+//@ решение из ответов (можно было воспользоваться для проверки isInteger)
+/*const squareList = arr => {
+    return arr.reduce((sqrIntegers, num) => {
+        return Number.isInteger(num) && num > 0
+            ? sqrIntegers.concat(num * num)
+            : sqrIntegers;
+    }, []);
+};
+const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+console.log(squaredIntegers);*/
+
+/*?5 Split a String into an Array Using the split Method*/
+
+function splitify(str) {
+    // Only change code below this line
+
+    return str.split(/\s|,|-|\./)
+    // Only change code above this line
+}
+
+const result = splitify("Hello World,I-am code");
+console.log(result)
