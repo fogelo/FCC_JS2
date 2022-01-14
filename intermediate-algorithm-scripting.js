@@ -40,10 +40,41 @@ console.log(result)*/
 
 /*?3. Seek and Destroy*/
 
+/*
 function destroyer(arr) {
     const [arr1, ...rest] = [...arguments];
     return arr1.filter((item)=>!rest.includes(item))
 }
 
 const result = destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+console.log(result)*/
+
+/*§4. Wherefore art thou*/
+
+/*//@ мое решение (так не проканало, но все равно интересно)
+function whatIsInAName(collection, source) {
+    const arr = [];
+    // Only change code below this line
+    return collection.filter((item)=> JSON.stringify(item).includes(JSON.stringify(source).replace(/{|}/g, '')))
+    // Only change code above this line
+}*/
+
+
+//@ решение из ответов
+function whatIsInAName(collection, source) {
+    let srcKeys = Object.keys(source)
+    return collection.filter((obj) => {
+       return  srcKeys.every((item) => {
+            return obj.hasOwnProperty(item) && obj[item]===source[item] //будет работать и без obj.hasOwnProperty(item)
+        })
+    })
+}
+
+// const arr = [{first: "Romeo", last: "Montague"}, {first: "Mercutio", last: null}, {first: "Tybalt", last: "Capulet"}]
+// const result = whatIsInAName(arr, {last: "Capulet"});
+const arr = [{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }]
+const result = whatIsInAName(arr, { "apple": 1, "cookie": 2 });
+
 console.log(result)
+
+
