@@ -147,6 +147,7 @@ console.log(result)
 }*/
 
 //@ best
+/*
 function pairElement(str) {
     let pairs = {
         A: 'T',
@@ -159,7 +160,21 @@ function pairElement(str) {
 }
 const result = pairElement("ATCGA");
 console.log(result)
+*/
 
+/*?7. Missing letters*/
+
+function fearNotLetter(str) {
+    for (let i = 0; i < str.length; i++) {
+        if (str.charCodeAt(i + 1) - str.charCodeAt(i) === 2) {
+            return String.fromCharCode((str.charCodeAt(i + 1) + str.charCodeAt(i)) / 2)
+        }
+    }
+    return undefined
+}
+
+const result = fearNotLetter("abcde");
+console.log(result)
 
 
 
