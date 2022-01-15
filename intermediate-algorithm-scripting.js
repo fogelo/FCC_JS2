@@ -189,6 +189,7 @@ console.log(result)
     return [...new Set(result)]
 }*/
 
+/*
 //@ решение из ответов
 function uniteUnique(...arrays) {
     let result = [].concat(...arrays)
@@ -196,6 +197,40 @@ function uniteUnique(...arrays) {
 }
 
 const result = uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+console.log(result)
+*/
+
+// Object.is()
+
+/*?9. Convert HTML Entities*/
+
+//@ мое решение
+/*function convertHTML(str) {
+    function replacer(item) {
+        item = item.replace(`&`, '&amp;')
+        item = item.replace(`<`, '&lt;')
+        item = item.replace(`>`, '&gt;')
+        item = item.replace(`"`, '&quot;')
+        item = item.replace(`'`, '&apos;')
+        return item
+    }
+
+    return str.replace(/&|<|>|"|'/g, replacer);
+}*/
+
+//@ решение из ответов (как мое только немного оптимизированней)
+function convertHTML(str) {
+    let htmlEntities = {
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&apos;",
+    }
+    return str.replace(/[&<>"']/g, match=>htmlEntities[match]) // то есть repalce как-бы вызывается каждый раз когда
+}
+
+const result = convertHTML("<>"); //&amp
 console.log(result)
 
 
