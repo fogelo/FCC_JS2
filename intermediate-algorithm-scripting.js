@@ -164,6 +164,7 @@ console.log(result)
 
 /*?7. Missing letters*/
 
+/*
 function fearNotLetter(str) {
     for (let i = 0; i < str.length; i++) {
         if (str.charCodeAt(i + 1) - str.charCodeAt(i) === 2) {
@@ -175,7 +176,26 @@ function fearNotLetter(str) {
 
 const result = fearNotLetter("abcde");
 console.log(result)
+*/
 
+/*?8. Sorted Union*/
+//@ мое решение
+/*function uniteUnique(arr) {
+    let arrays = [...arguments]
+    let result = []
+    for (let i = 0; i < arrays.length; i++) {
+        result = [...result, ...arrays[i]]
+    }
+    return [...new Set(result)]
+}*/
 
+//@ решение из ответов
+function uniteUnique(...arrays) {
+    let result = [].concat(...arrays)
+    return [...new Set(result)]
+}
+
+const result = uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+console.log(result)
 
 
