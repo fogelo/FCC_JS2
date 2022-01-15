@@ -61,7 +61,7 @@ function whatIsInAName(collection, source) {
 
 
 //@ решение из ответов
-function whatIsInAName(collection, source) {
+/*function whatIsInAName(collection, source) {
     let srcKeys = Object.keys(source)
     return collection.filter((obj) => {
        return  srcKeys.every((item) => {
@@ -74,7 +74,93 @@ function whatIsInAName(collection, source) {
 // const result = whatIsInAName(arr, {last: "Capulet"});
 const arr = [{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }]
 const result = whatIsInAName(arr, { "apple": 1, "cookie": 2 });
+console.log(result)*/
 
+
+/*§5. Spinal Tap Case*/
+/*//@ мое решение
+function spinalCase(str) {
+    return str.replace(/[A-Z]/g, (letter) => ' ' + letter)
+        .trim()
+        .toLowerCase()
+        .split(/_|\s+/)
+        .filter((item)=>item)
+        .join('-')
+}*/
+
+//@ решения из ответов №1
+/*function spinalCase(str) {
+    // Create a variable for the white space and underscores.
+    let regex = /\s+|_+/g;
+
+    // Replace low-upper case to low-space-uppercase
+    str = str.replace(/([a-z])([A-Z])/g, item=>item.split('').join(' '));
+    console.log(str)
+    // Replace space and underscore with -
+    return str.replace(regex, "-").toLowerCase();
+}*/
+
+//@ решения из ответов №2
+/*function spinalCase(str) {
+    return str
+        // /(?=[A-Z])/ - по факту эта проверка находит 'место' перед любой заглавной буквой и можно так разделить строку
+        .split(/\s|_|(?=[A-Z])/)
+        .join("-")
+        .toLowerCase();
+}
+
+// test here
+const result = spinalCase('thisIsSpinalTap');
+console.log(result)*/
+
+/*?6. Search and Replace*/
+//@ мое решение
+/*function myReplace(str, before, after) {
+    let regBefore = new RegExp(`${before}`)
+    const check = (item) => {
+        if(item.toLowerCase() === item) {
+            return after.toLowerCase()
+        } else {
+            after = [...after]
+            after[0] = after[0].toUpperCase()
+            return after.join('')
+        }
+    }
+    return str.replace(regBefore, check);
+}
+
+const result = myReplace("A quick brown fox Jumped over the lazy dog", "Jumped", "leaped");
 console.log(result)
+*/
+
+/*?6. DNA Pairing*/
+//@ мое решение
+/*function pairElement(str) {
+    let result = []
+    for (let i = 0; i < str.length; i++) {
+        str[i] === 'G' ? result.push(['G', 'C'])
+            : str[i] === 'C' ? result.push(['C', 'G'])
+                : str[i] === 'A' ? result.push(['A', 'T'])
+                    : str[i] === 'T' ? result.push(['T', 'A']) : ''
+    }
+    return result;
+}*/
+
+//@ best
+function pairElement(str) {
+    let pairs = {
+        A: 'T',
+        T: 'A',
+        C: 'G',
+        G: 'C',
+    }
+    let arr = str.split('')
+    return arr.map(x=>[x, pairs[x]])
+}
+const result = pairElement("ATCGA");
+console.log(result)
+
+
+
 
 
