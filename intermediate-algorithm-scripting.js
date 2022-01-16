@@ -219,6 +219,7 @@ console.log(result)
 }*/
 
 //@ решение из ответов (как мое только немного оптимизированней)
+/*
 function convertHTML(str) {
     let htmlEntities = {
         "&": "&amp;",
@@ -232,5 +233,75 @@ function convertHTML(str) {
 
 const result = convertHTML("<>"); //&amp
 console.log(result)
+*/
 
+/*?10. Sum All Odd Fibonacci Numbers*/
+//@ мое решение
+/*function sumFibs(num) {
+    let arr = [0, 1]
+    for (let i = 0; i < num; i++) {
+        if (arr[i] + arr[i + 1] <= num) {
+            arr.push(arr[i] + arr[i + 1])
+        }
+    }
+    console.log(arr)
+    return arr
+        .filter(item => item % 2 !== 0)
+        .reduce((prev,item)=>prev+item)
+}*/
 
+/*const result = sumFibs(1000);
+console.log(result)*/
+
+/*§11. Sum All Primes*/
+
+//@ мое решение (не прошло тест)
+/*function sumPrimes(num) {
+    let numbers = []
+    for (let i = 1; i <= num; i++) {
+        numbers.push(i)
+    }
+    let primeNumbers = numbers.filter(item => !(item === 1
+        || item % 2 === 0 && item !== 2
+        || item % 3 === 0 && item !== 3
+        || item % 5 === 0 && item !== 5
+        || item % 7 === 0 && item !== 7)
+    )
+    console.log(numbers)
+    console.log(primeNumbers)
+    return primeNumbers.reduce((prev, item) => prev + item, 0)
+}*/
+
+//@ решение из ответов №1 (фишка в Math.sqrt() если сделать просто до num цикл доработает до конца и в итоге вернет false)
+/*function sumPrimes(num) {
+    // Helper function to check primality
+    function isPrime(num) {
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0)
+                return false;
+        }
+        return true;
+    }
+
+    // Check all numbers for primality
+    let sum = 0;
+    for (let i = 2; i <= num; i++) {
+        if (isPrime(i))
+            sum += i;
+    }
+    return sum;
+}*/
+
+/*//@ решение из ответов №2 (вот это решение мне нравится)
+function sumPrimes(num) {
+    let primes = []
+    for (let i = 2; i <= num; i++) {
+        if (primes.every(prime => i % prime !== 0)) {
+            primes.push(i)
+        }
+    }
+    return primes.reduce((prev, item) => prev + item)
+}
+
+const result = sumPrimes(4);
+console.log(result)*/
