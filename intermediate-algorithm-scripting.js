@@ -344,11 +344,22 @@ const result = dropElements([1, 2, 3, 4], function (n) {
 console.log(result)*/
 
 /*?14. Steamroller*/
-//@ мое решение, подсмотрел в мозиле
+
+/*//@ мое решение, подсмотрел в мозиле
 function steamrollArray(arr) {
-        return arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? steamrollArray(val) : val), [])
+    return arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? steamrollArray(val) : val), [])
 }
 
 const result = steamrollArray([1, [2], [3, [[4]]]]);
-console.log(result)
+console.log(result)*/
 
+/*?15. Binary Agents*/
+//@ мое решение, подсмотрел в мозиле
+
+function binaryAgent(str) {
+    return  str.split(' ').map(item=>parseInt(item, 2)).map(item=>String.fromCharCode(item)).join('')
+}
+
+const result = binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 " +
+    "01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111");
+console.log(result)
