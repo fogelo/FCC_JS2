@@ -292,7 +292,7 @@ console.log(result)*/
     return sum;
 }*/
 
-/*//@ решение из ответов №2 (вот это решение мне нравится)
+/*//@ решение из ответов №2 (вот это решение мне нравится, но оно менее эффективно)
 function sumPrimes(num) {
     let primes = []
     for (let i = 2; i <= num; i++) {
@@ -305,3 +305,39 @@ function sumPrimes(num) {
 
 const result = sumPrimes(4);
 console.log(result)*/
+
+/*?12. Smallest Common Multiple*/
+/*
+//@ мое решение (не самое эффективное, но как есть. В ответах вроде не намного лучше )
+function smallestCommons(arr) {
+    arr.sort((a, b) => a - b)
+    let newArr = []
+    for (let i = arr[0]; i <= arr[arr.length - 1]; i++) {
+        newArr.push(i)
+    }
+    for (let i = newArr[newArr.length - 1]; i <= newArr.reduce((prev, item) => prev * item, 1); i++) {
+        if (newArr.every(item => i % item === 0)) {
+            return i
+        }
+    }
+}
+
+const result = smallestCommons([23, 18]);
+console.log(result)*/
+
+
+/*?13. Drop it*/
+//@ мое решение
+function dropElements(arr, func) {
+    for (let i = 0; i < arr.length; i++) {
+        if (func(arr[i])) {
+            return arr.slice(i)
+        }
+    }
+    return []
+}
+
+const result = dropElements([1, 2, 3, 4], function (n) {
+    return n > 4
+})
+console.log(result)
