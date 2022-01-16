@@ -386,7 +386,7 @@ console.log(result)*/
 
 /*?17. Arguments Optional*/
 
-function addTogether(a) {
+/*function addTogether(a) {
     if(typeof a !== 'number'){
         return undefined
     }
@@ -402,12 +402,39 @@ function addTogether(a) {
 }
 
 const result = addTogether('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+console.log(result)*/
+
+/*?17. */
+const Person = function (firstAndLast) {
+    // Only change code below this line
+    // Complete the method below and implement the others similarly
+    this.getFullName = function () {
+        return firstAndLast
+    }
+    this.getFirstName = function () {
+        return firstAndLast.split(' ')[0]
+    }
+    this.getLastName = function () {
+        return firstAndLast.split(' ')[1]
+    }
+    this.setFullName = function (newFullName) {
+        firstAndLast = newFullName
+    }
+    this.setFirstName = function (newFirstName) {
+        firstAndLast = firstAndLast.replace(/^\w+/, newFirstName)
+    }
+    this.setLastName = function (newLastName) {
+        firstAndLast = firstAndLast.replace(/\w+$/, newLastName)
+    }
+    return firstAndLast;
+};
+
+const bob = new Person('Bob Ross');
+console.log(bob)
+bob.setLastName('anton')
+const result = bob.getLastName();
 console.log(result)
-
-
-
-
-
+console.log(Object.keys(bob).length)
 
 
 
