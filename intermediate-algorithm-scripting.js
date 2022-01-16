@@ -327,6 +327,7 @@ console.log(result)*/
 
 
 /*?13. Drop it*/
+/*
 //@ мое решение
 function dropElements(arr, func) {
     for (let i = 0; i < arr.length; i++) {
@@ -340,4 +341,14 @@ function dropElements(arr, func) {
 const result = dropElements([1, 2, 3, 4], function (n) {
     return n > 4
 })
+console.log(result)*/
+
+/*?14. Steamroller*/
+//@ мое решение, подсмотрел в мозиле
+function steamrollArray(arr) {
+        return arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? steamrollArray(val) : val), [])
+}
+
+const result = steamrollArray([1, [2], [3, [[4]]]]);
 console.log(result)
+

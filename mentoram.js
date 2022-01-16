@@ -44,3 +44,14 @@ const a = {
 if(a == 1 && a == 2 && a == 3) {
     console.log('Hello World!');
 }
+
+/*§3. а это как работает? (как вообще понять и не бояться рекурсии)*/
+const arr = [1, 2, [3, 4, [5, 6]]];
+
+function flatDeep(arr, d = 1) {
+    return d > 0 ? arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), [])
+        : arr.slice();
+};
+
+const result = flatDeep(arr, Infinity);
+console.log(result)
