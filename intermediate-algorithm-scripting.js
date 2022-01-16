@@ -354,12 +354,77 @@ const result = steamrollArray([1, [2], [3, [[4]]]]);
 console.log(result)*/
 
 /*?15. Binary Agents*/
-//@ мое решение, подсмотрел в мозиле
+//@ мое решение
 
-function binaryAgent(str) {
+/*function binaryAgent(str) {
     return  str.split(' ').map(item=>parseInt(item, 2)).map(item=>String.fromCharCode(item)).join('')
 }
 
 const result = binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 " +
     "01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111");
+console.log(result)*/
+
+/*?16. Binary Agents*/
+//@ мое решение
+/*function truthCheck(collection, pre) {
+    for (let i = 0; i < collection.length; i++) {
+        if (!!collection[i][pre] === false) {
+            return false
+        }
+    }
+    return true
+}*/
+
+
+/*//@ решение из ответов (более лаконичное)
+function truthCheck(collection, pre) {
+    return collection.every(obj=>!!obj[pre]) // !!знаки не обязательно, но так наглядней (сам поставил)
+}
+const result = truthCheck([{"user": "Tinky-Winky", "sex": "male"},
+    {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "male"}], "sex");
+console.log(result)*/
+
+/*?17. Arguments Optional*/
+
+function addTogether(a) {
+    if(typeof a !== 'number'){
+        return undefined
+    }
+    if ([...arguments].length > 1) {
+        const [a, b] = [...arguments]
+        return (typeof a !== 'number' || typeof b !== 'number') ? undefined : a + b
+    } else {
+
+        return function (b) {
+            return (typeof a !== 'number' || typeof b !== 'number') ? undefined : a + b
+        }
+    }
+}
+
+const result = addTogether('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
 console.log(result)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
