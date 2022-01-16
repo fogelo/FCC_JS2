@@ -404,8 +404,8 @@ console.log(result)*/
 const result = addTogether('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
 console.log(result)*/
 
-/*?17. */
-const Person = function (firstAndLast) {
+/*?17. Make a Person*/
+/*const Person = function (firstAndLast) {
     // Only change code below this line
     // Complete the method below and implement the others similarly
     this.getFullName = function () {
@@ -434,10 +434,27 @@ console.log(bob)
 bob.setLastName('anton')
 const result = bob.getLastName();
 console.log(result)
-console.log(Object.keys(bob).length)
+console.log(Object.keys(bob).length)*/
 
+/*?18. Map the Debris*/
 
+//@ решение из ответо (просто скопировал и не стал разбираться что есть что
+function orbitalPeriod(arr) {
+    const GM = 398600.4418;
+    const earthRadius = 6367.4447;
+    const newArr = [];
 
+    for (let elem in arr) {
+        const orbitalPer = Math.round(
+            2 * Math.PI * Math.sqrt(Math.pow(arr[elem].avgAlt + earthRadius, 3) / GM)
+        );
+        newArr.push({name: arr[elem].name, orbitalPeriod: orbitalPer});
+    }
+    return newArr;
+}
+
+// test here
+orbitalPeriod([{ name: "sputnik", avgAlt: 35873.5553 }]);
 
 
 
