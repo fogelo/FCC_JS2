@@ -47,7 +47,7 @@ console.log(result)*/
 
 /*?3. Caesars Cipher*/
 
-function rot13(str) {
+/*function rot13(str) {
     return [...str]
         .map(item => item.charCodeAt(0) - 13)
         .map(item => item === 19 || item === 50 || item === 33 || item === 20 ? item + 13
@@ -56,9 +56,25 @@ function rot13(str) {
         .join('')
 }
 
-const result = rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT?.!");
-console.log(result)
-console.log('!'.charCodeAt())
-console.log('.'.charCodeAt())
+const result = rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT?.!");*/
 
-// item !== ' ' && item !== '!' && item !== '?' && item !== '.' ?
+
+/*?4. Telephone Number Validator*/
+
+function telephoneCheck(str) {
+    let regExp = /^1?\s?(\(\d{3}\)|\d{3})-?\s?\d{3}-?\s?\d{4}$/g
+    return regExp.test(str)
+}
+
+const result = telephoneCheck("(275)76227382");
+console.log(result)
+
+
+/*
+555-555-5555
+(555)555-5555
+(555) 555-5555
+555 555 5555
+5555555555
+1 555 555 5555
+*/
